@@ -18,6 +18,8 @@ def moveimage(event):
         print (cont)
         if cont ==0:
             print ("gol")
+            b1=Button(canvas,text="GOL") # Primer botón
+            b1.pack()
     else:
         canvas.move(2, 2, 0)
              
