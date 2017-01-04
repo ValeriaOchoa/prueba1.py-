@@ -1,5 +1,6 @@
 ##movimiento de imagen
 from tkinter import *
+
 tk = Tk()
 cont=170
 canvas = Canvas(tk, width=800, height=300)
