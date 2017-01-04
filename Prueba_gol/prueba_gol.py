@@ -1,7 +1,7 @@
 ##movimiento de imagen
 from tkinter import *
 tk = Tk()
-cont=0
+cont=170
 canvas = Canvas(tk, width=800, height=300)
 canvas.pack()
 my_image2 = PhotoImage(file="arco.gif")
@@ -10,12 +10,13 @@ my_image = PhotoImage(file="balon.gif")
 canvas.create_image(550,0,anchor=NW, image=my_image)
 
 def moveimage(event):
+    global cont 
     if  event.keysym == 'Left':
-        cont+1
         canvas.move(2, -2, 0)
-        c=cont+1
-        print (cont+c)
-    
+        cont =cont-1
+        print (cont)
+        if cont ==0:
+            print ("gol")
     else:
         canvas.move(2, 2, 0)
              
